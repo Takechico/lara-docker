@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./laravel
+      dockerfile: Dockerfile
+    container_name: laravel-app
+    environment:
+      PHP_OPCACHE_ENABLE: 1
+      PRODUCTION: 1
+    ports:
+      - "8090:80"
+    volumes:
+      - vendor-data:/var/www/laravel/vendor
+      - storage-data:/var/www/laravel/storage
+    networks:
+      - private-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    container_name: laravel-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache:/data
+    networks:
+      - private-network
+
+volumes:
+  vendor-data:
+  storage-data:
+  cache:
+
+networks:
+  private-network:
+    external: true
