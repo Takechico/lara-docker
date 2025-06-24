@@ -3,6 +3,7 @@ version: '3.8'
 services:
   api:
     build:
+      # Here will be context of your app
       context: ./laravel
       dockerfile: Dockerfile
     container_name: laravel-app
