@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e3e9f0 100%);
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(60, 72, 88, 0.18);
+            max-width: 420px;
+            width: 100%;
+            padding: 40px 30px 32px 30px;
+            text-align: center;
+            animation: fadeIn 0.7s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .icon {
+            font-size: 4.5rem;
+            color: #dc3545;
+            margin-bottom: 18px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: #dc3545;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 26px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 28px;
+            border-radius: 6px;
+            background: #007bff;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.10);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        a:hover {
+            background: #0056b3;
+            box-shadow: 0 4px 16px rgba(0,123,255,0.15);
+        }
+        @media (max-width: 520px) {
+            .container {
+                padding: 28px 10px 20px 10px;
+            }
+            h1 { font-size: 1.5rem; }
+            .icon { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="icon">🚧</div>
+    <h1>Oops! Something went wrong.</h1>
+    <p>We're experiencing some technical issues.<br>
+        Please try again later or contact support if the problem persists.</p>
+    <a href="/">Return to Home Page</a>
+</div>
+</body>
+</html>
